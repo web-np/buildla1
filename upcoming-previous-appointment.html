@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/datatables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+
+    <link rel="stylesheet" href="assets/fonts/flaticon.css">
+
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+
+    <link rel="stylesheet" href="assets/css/nice-select.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link rel="stylesheet" href="assets/css/theme-dark.css">
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <title>Upcoming/Previous Appointment | BuildLA</title>
+
+    <link rel="icon" type="image/png" href="assets/img/logo/lacity_logo.svg">
+
+    <style>
+        :root {
+            --theme-color-one: #301d44;
+            --theme-color-two: #fba311;
+        }
+
+        .inner-banner {
+            background-image: url("assets/img/picture15.jpg");
+        }
+
+        .menu-li:hover {
+            background-color: var(--theme-color-one);
+        }
+
+        .menu-li:has(:is(a.active)) {
+            background-color: var(--theme-color-one);
+        }
+
+        .breadcrumb-item a {
+            color: var(--theme-color-two);
+        }
+
+        .inner-title::before {
+            height: auto !important;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            top: 19% !important;
+        }
+        [tbl-data-icon]{
+            height:1rem;
+            width:1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="header-left">
+                        <div class="d-flex align-items-center">
+                            <div class="my-2">
+                                <img class="d-inline-flex" src="assets/img/logo/lacity_logo.svg" style="height:35px;"><span class="text-white d-inline-flex fw-bold mx-1" style="font-family: 'Oswald', sans-serif !important;">LOS ANGELES</span>
+                            </div>
+
+                        </div>
+                        <!-- <div class="header-left-card">
+                            <ul>
+                                <li>
+                                    <div class="head-icon">
+                                        <i class='bx bxs-location-plus'></i>
+                                    </div>
+                                    <a href="#">6th Floar, Anilen Tower, Barbosa, Sydney</a>
+                                </li>
+                                <li>
+                                    <div class="head-icon">
+                                        <i class='bx bxs-envelope'></i>
+                                    </div>
+                                    <a
+                                        href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#046d6a626b44626d6a61672a676b69"><span
+                                            class="__cf_email__"
+                                            data-cfemail="f1989f979eb197989f9492df929e9c">[email&#160;protected]</span></a>
+                                </li>
+                            </ul>
+
+
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="header-right">
+                        <div class="d-flex align-items-center mx-1">
+                            <div class="">
+                                <i class="fas fa-virus-covid text-white"></i>
+                                <a href="#" class="text-white">Update on coronavirus</a>
+                            </div>
+                            <div class="vr bg-white mx-2"></div>
+                            <div class="">
+                                <span class="bg-white rounded rounded-2 p-1" style="color:var(--theme-color-one);">311</span>
+                                <a href="#" class="text-white">City Services</a>
+                            </div>
+                            <div class="vr bg-white mx-2"></div>
+                            <div class="">
+                                <span class="bg-white rounded rounded-2 p-1" style="color:var(--theme-color-one);">LA</span>
+                                <a href="#" class="text-white">City Directory</a>
+                            </div>
+                        </div>
+                        <!-- <div class="top-social-link">
+                            <ul>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <i class='bx bxl-google-plus'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+                        <!-- <div class="language">
+                            <i class='bx bx-world language-icon'></i>
+                            <select class="language-list-item">
+                                <option>English</option>
+                                <option>العربيّة</option>
+                                <option>Deutsch</option>
+                                <option>Português</option>
+                                <option>简体中文</option>
+                            </select>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="navbar-area">
+
+        <div class="mobile-nav">
+            <a href="index.html" class="logo py-1">
+                <img src="assets/img/logo/BuildLA_Logo.png" class="logo-one" alt="Logo">
+                <!-- <img src="assets/img/logo-2.png" class="logo-two" alt="Logo"> -->
+            </a>
+        </div>
+
+        <div class="main-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light ">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo/BuildLA_Logo.png" style="height: 48px;" class="logo-one py-1"
+                             alt="Logo">
+                        <!-- <img src="assets/img/logo-2.png" class="logo-two" alt="Logo"> -->
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item menu-li">
+                                <a href="index.html" class="nav-link ">
+                                    Home
+                                    <!--<i class='bx bx-chevron-down'></i>-->
+
+                                </a>
+
+                            </li>
+                            <li class="nav-item menu-li">
+                                <a href="#" class="nav-link">
+                                    Locations
+                                </a>
+                            </li>
+                            <li class="nav-item menu-li">
+                                <a href="#" class="nav-link">
+                                    Tools
+                                    <!-- <i class='bx bx-chevron-down'></i> -->
+                                </a>
+
+                            </li>
+                            <li class="nav-item menu-li">
+                                <a href="service.html" class="nav-link">
+                                    All Services
+                                    <i class='bx bx-chevron-down'></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            ePlanLA
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Online Permits
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Fire Inspection
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!--  -->
+
+                            </li>
+
+                            <li class="nav-item menu-li">
+                                <a href="#" class="nav-link">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="others-options d-flex align-items-center">
+                            <div class="option-item">
+                                <i class='search-btn bx bx-search'></i>
+                                <i class='close-btn bx bx-x'></i>
+                                <div class="search-overlay search-popup">
+                                    <div class='search-box'>
+                                        <form class="search-form">
+                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <button class="search-button" type="submit">
+                                                <i class="bx bx-search"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option-item">
+                                <div class="menu-icon d-in-line">
+                                    <a href="#" class="burger-menu menu-icon-two">
+                                        <i class='flaticon-menu'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="side-nav-responsive">
+            <div class="container">
+                <div class="dot-menu">
+                    <div class="circle-inner">
+                        <div class="circle circle-one"></div>
+                        <div class="circle circle-two"></div>
+                        <div class="circle circle-three"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="side-nav-inner">
+                        <div class="side-nav justify-content-center align-items-center">
+                            <div class="side-item">
+                                <div class="option-item">
+                                    <div class="menu-icon d-in-line">
+                                        <a href="#" class="burger-menu menu-icon-two">
+                                            <i class='flaticon-menu'></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-item">
+                                <div class="option-item">
+                                    <i class='search-btn bx bx-search'></i>
+                                    <i class='close-btn bx bx-x'></i>
+                                    <div class="search-overlay search-popup">
+                                        <div class='search-box'>
+                                            <form class="search-form">
+                                                <input class="search-input" name="search" placeholder="Search"
+                                                       type="text">
+                                                <button class="search-button" type="submit">
+                                                    <i class="bx bx-search"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sidebar-modal">
+        <div class="sidebar-modal-inner">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <img src="assets/img/logo/BuildLA_Logo.png" class="logo-one" style="height:35px; margin-top: 15px;"
+                         alt="Logo">
+                    <!-- <img src="assets/img/logo-2.png" class="logo-two" alt="Logo"> -->
+                </div>
+                <span class="close-btn sidebar-modal-close-btn">
+                    <i class="bx bx-x"></i>
+                </span>
+            </div>
+            <div class="sidebar-about">
+                <h3>Services</h3>
+                <div class="footer-widget">
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#!" target="_blank">
+                                <i class='bx bx-chevron-right'></i>
+                                A Permits Online
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" target="_blank">
+                                <i class='bx bx-chevron-right'></i>
+                                Case Management
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" target="_blank">
+                                <i class='bx bx-chevron-right'></i>
+                                Claim for Refund
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" target="_blank">
+                                <i class='bx bx-chevron-right'></i>
+                                Fire Inspection
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" target="_blank">
+                                <i class='bx bx-chevron-right'></i>
+                                Housing Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" target="_blank">
+                                <i class='bx bx-chevron-right'></i>
+                                Industrial Waste
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" target="_blank">
+                                <i class='bx bx-chevron-right'></i>
+                                StreetsLA Permit
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <!-- <ul>
+                    <li>
+                        Provides immediate responses to all calls requiring non-technical assistance
+                    </li>
+                    <li>
+                        <i class='bx bx-mail-send'></i>
+                        <a
+                            href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#a5cdc0c9c9cae5c3cccbc0c68bc6cac8"><span
+                                class="__cf_email__"
+                                data-cfemail="68000d040407280e01060d0b460b0705">[email&#160;protected]</span></a>
+                        <a href="#">Skype: example</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-phone-call'></i>
+                        <a href="tel:+612-831-713-80"> +612-831-713-80</a>
+                        <a href="tel:+612-831-345-70"> +612-831-345-70</a>
+                    </li>
+                </ul> -->
+                <h6>Call 3-1-1&nbsp;(within the City of Los Angeles) for quickest service.</h6>
+                <p>Callers from outside Los Angeles can call (213) 473-3231.</p>
+            </div>
+            <!-- <div class="sidebar-instagram-feed">
+                <h2>Instagram</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/instagram/instagram1.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/instagram/instagram2.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/instagram/instagram3.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/instagram/instagram4.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/instagram/instagram5.jpg" alt="image">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/img/instagram/instagram6.jpg" alt="image">
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- <div class="sidebar-follow-us">
+                <h2>Follow Us</h2>
+                <ul class="social-wrap">
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="bx bxl-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+
+
+    <div class="inner-banner">
+        <div class="container">
+            <div class="inner-title text-center py-sm-5">
+                <h3>Appointments</h3>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-2 mb-3">
+        <div class="row">
+            <div class="col-md-12 ">
+                <nav aria-label="breadcrumb inner-title">
+                    <ul class="breadcrumb float-end">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Appointments</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-11 m-auto">
+                <div class="card">
+                    <div class="card-header align-items-center d-flex">
+                        <h3 class="mt-2 mb-3 card-title mb-0 flex-grow-1" style="color: var(--theme-color-two);" data-title="this">Upcoming Appointment</h3>
+
+                        <div class="flex-shrink-0">
+                            <ul class="nav justify-content-end nav-pills card-header-pills" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#one1" role="tab" data-title="one">
+                                        <!--<span class="d-block d-sm-none"><i class="fas fa-home"></i></span>-->
+                                        <span class="d-block">Upcoming</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#two1" role="tab" data-title="two">
+                                        <!--<span class="d-block d-sm-none"><i class="far fa-user"></i></span>-->
+                                        <span class="d-block">Previous</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div><!-- end card header -->
+
+                    <div class="card-body">
+
+                        <!-- Tab panes -->
+                        <div class="tab-content text-muted">
+                            <div class="tab-pane active" id="one1" role="tabpanel">
+                                <div class="text-end my-2">
+                                    <button type="button" class="btn btn-primary">View As Calendar</button>
+                                </div>
+                                <div class="card card-body">
+                                    <div class="table-responsive mb-5">
+                                        <table class="table table-hover table-bordered mt-2" data-Table="">
+                                            <thead style="background-color:#301d44;color: #fff;">
+                                                <tr>
+                                                    <th>Date/Time</th>
+                                                    <th>ID</th>
+                                                    <th>Service</th>
+                                                    <th>Contact Info</th>
+                                                    <th>Appt Type/Meeting Link</th>
+                                                    <th>Comments</th>
+                                                    <th>Status</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Nov 23, 2022<br>3:00 PM to 3:15 PM</td>
+                                                    <td>3987</td>
+                                                    <td>
+                                                        BOE<br>
+                                                        BOE - Central District
+                                                        B Permits
+                                                        123 Main Street
+                                                    </td>
+                                                    <td>Text Msg. Number<span class="d-block"><a href="">Add</a></span></td>
+                                                    <td>Online Marketing</td>
+                                                    <td></td>
+                                                    <td>Submitted</td>
+                                                    <td>
+                                                        <a href="#" class="d-block"><i class="fa fa-times"></i>&nbsp;Cancel</a>
+                                                        <a href="#" class="d-block"><i class="fa fa-calendar"></i>&nbsp;Reshedual</a>
+                                                        <a href="#" class="d-block"><i class="fa fa-file"></i>&nbsp;Attachments</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td></td>
+                                                    <td>3809</td>
+                                                    <td>BOE<br> BOE - Harbor District Construction A Permit</td>
+                                                    <td>Text Msg. Number<span class="d-block"><a href="#">Add</a></span></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>INPROGRESS</td>
+                                                    <td>
+                                                        <a href="#" class="d-block "><i class="fa fa-times"></i>&nbsp;Cancel</a>
+                                                        <a href="#" class="d-block"><i class="fa fa-calendar"></i>&nbsp;Resume</a>
+                                                        <a href="#" class="d-block"><i class="fa fa-file"></i>&nbsp;Attachments</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td></td>
+                                                    <td>3786</td>
+                                                    <td>
+                                                        LADBS <br>LADBS - Metro (Downtown), 10th Floor
+                                                        Case Management
+                                                    </td>
+                                                    <td>Text Msg. Number<span class="d-block"><a href="">Add</a></span></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>INPROGRESS</td>
+                                                    <td>
+                                                        <a href="#" class="d-block" data-bs-toggle="tooltip" title="Cancle"><i class="fa fa-times"></i>&nbsp;Cancel</a>
+                                                        <a href="#" class="d-block"><i class="fa fa-calendar"></i>&nbsp;Resume</a>
+                                                        <a href="#" class="d-block"><i class="fa fa-file"></i>&nbsp;Attachments</a>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="two1" role="tabpanel">
+                                <div class="text-end my-2">
+                                    <button type="button" class="btn btn-primary">Archived Appointments</button>
+                                </div>
+                                <div class="card card-body">
+                                    <div class="table-responsive mb-5">
+                                        <table class="table table-hover table-bordered mt-2" data-Table>
+                                            <thead style="background-color:#301d44;color: #fff;">
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Date/Time</th>
+                                                    <th>ID</th>
+                                                    <th>Service</th>
+                                                    <th>Contact Phone Number</th>
+                                                    <th>Appt Type/Meeting Link</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span class="badge rounded rounded-circle bg-success" tbl-data-icon><i class="fas fa-plus"></i></span></td>
+                                                    <td>Nov 17, 2022<span class="d-block">10:30 AM to 10:45 AM</span></td>
+                                                    <td>3989</td>
+                                                    <td>
+                                                        BOE<span class="d-block">
+                                                            BOE - Central District Excavation U (Utility) Permit
+                                                        </span>
+                                                    </td>
+                                                    <td></td>
+                                                    <td>
+                                                        Virtual<span class="d-block"></span>
+                                                        <a href="#">https://meet.google.com/qct-ujrr-rsg</a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td><span class="badge rounded rounded-circle bg-danger p-1"><i class="fas fa-close"></i></span></td>
+                                                    <td>Nov 10, 2022<span class="d-block">9:00 AM to 9:30 AM</span></td>
+                                                    <td>3933</td>
+                                                    <td>BOE<span class="d-block"> BOE - Harbor District Sewer Connection (S) Permit</span></td>
+                                                    <td></td>
+                                                    <td>In-Person</td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td><span class="badge rounded rounded-circle bg-success p-1"><i class="fas fa-plus"></i></span></td>
+                                                    <td>Sep 30, 2022<span class="d-block">9:30 AM to 9:45 AM</span></td>
+                                                    <td>3642</td>
+                                                    <td>BOE <span class="d-block">BOE - Central District Construction A Permit</span></td>
+                                                    <td>(626)818-2263</td>
+                                                    <td>
+                                                        Virtual<span class="d-block"></span>
+                                                        <a href="#">https://meet.google.com/zud-hhix-noh</a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td><span class="badge rounded rounded-circle bg-danger p-1"><i class="fas fa-close"></i></span></td>
+                                                    <td>Sep 23, 2022<span class="d-block">9:30 AM to 9:45 AM</span></td>
+                                                    <td>3641</td>
+                                                    <td>BOE<span class="d-block">BOE - Central District Construction A Permit 12301 W VALLEYHEART DR</span></td>
+                                                    <td>(626)818-2263</td>
+                                                    <td>
+                                                        Virtual<span class="d-block"></span>
+                                                        <a href="#">https://meet.google.com/gyz-kumw-gxt</a>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td><span class="badge rounded rounded-circle bg-success p-1"><i class="fas fa-plus"></i></span></td>
+                                                    <td>Aug 24, 2022<span class="d-block">9:30 AM to 9:45 AM</span></td>
+                                                    <td>3576</td>
+                                                    <td>
+                                                        LADBS<span class="d-block">
+                                                            LADBS - Metro (Downtown),
+                                                            10th Floor
+                                                            Case Management
+                                                            12301 W VALLEYHEART DR
+                                                        </span>
+                                                    </td>
+                                                    <td><span class="badge rounded rounded-circle bg-danger p-1"><i class="fas fa-close"></i></span></td>
+                                                    <td>
+                                                        Virtual<span class="d-block"></span>
+                                                        <a href="#">https://meet.google.com/pij-fbec-mah</a>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- end card-body -->
+                </div><!-- end card -->
+            </div><!-- end col -->
+        </div>
+    </div>
+
+    <footer class="footer-area pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo/BuildLA_Logo.png" style="height: 48px;"
+                                     class="footer-logo-one py-1" alt="Logo">
+                                <!-- <img src="assets/img/logo-2.png" class="footer-logo-two" alt="Logo"> -->
+                            </a>
+                        </div>
+                        <p>
+                            Provides immediate responses to all calls requiring non-technical assistance
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-3">
+                    <div class="footer-widget">
+                        <h3>Links</h3>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Locations</a>
+                            </li>
+                            <li>
+                                <a href="#">Tools</a>
+                            </li>
+                            <li>
+                                <a href="#">All Services</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3">
+                    <div class="footer-widget">
+                        <h3>Locations</h3>
+                        <ul class="footer-list-two">
+                            <li>
+                                <i class='bx bx-location-plus'></i>
+                                201 N Figueroa St
+                            </li>
+                            <li>
+                                <i class='bx bx-location-plus'></i>
+                                6262 Van Nuys Blvd
+                            </li>
+                            <li>
+                                <i class='bx bx-location-plus'></i>
+                                1828 Sawtelle Blvd
+                            </li>
+                            <li>
+                                <i class='bx bx-location-plus'></i>
+                                1968 W Adams Blvd
+                            </li>
+                            <li>
+                                <i class='bx bx-location-plus'></i>
+                                638 S Beacon St #276
+                            </li>
+                        </ul>
+                        <!-- <h3>Contacts</h3> -->
+                        <!-- <ul class="footer-list-two">
+                            <li>
+                                <i class='bx bx-time'></i>
+                                Sun - Fri: 8.00am - 6.00pm
+                            </li>
+                            <li>
+                                <i class='bx bx-location-plus'></i>
+                                6th Floor, Barbosa, Sydney
+                            </li>
+                            <li>
+                                <i class='bx bx-phone'></i>
+                                <a href="tel:+61283171380">+61283171380</a>
+                            </li>
+                            <li>
+                                <i class='bx bx-phone'></i>
+                                <a href="tel:+61483471680">+61483471680</a>
+                            </li>
+                            <li>
+                                <i class='bx bxs-envelope'></i>
+                                <a
+                                    href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#60090e060f2006090e05034e030f0d"><span
+                                        class="__cf_email__"
+                                        data-cfemail="afc6c1c9c0efc9c6c1cacc81ccc0c2">[email&#160;protected]</span></a>
+                            </li>
+                        </ul> -->
+
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget pl-2">
+                        <h3>Newsletter</h3>
+                        <div class="newsletter-area">
+                            <form class="newsletter-form" data-toggle="validator" method="POST">
+                                <input type="email" class="form-control" placeholder="Your Email*" name="EMAIL" required
+                                    autocomplete="off">
+                                <button class="default-btn" type="submit">
+                                    Subscribe
+                                </button>
+                                <div id="validator-newsletter" class="form-result"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="copy-right-area">
+        <div class="container">
+            <div class="copy-right-text text-center">
+                <p>
+                    Copyright ©
+                    <script data-cfasync="false"
+                            src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                    <script>document.write(new Date().getFullYear())</script> City of Los Angeles. All rights reserved.
+                    <!-- <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a> -->
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/63904619daff0e1306db4f73/1gjlp3lb1';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="assets/js/meanmenu.js"></script>
+
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <script src="assets/js/form-validator.min.js"></script>
+
+    <script src="assets/js/contact-form-script.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            if (!$(".has-edit-mode-menu").length) {
+
+                appendFeedbackScript();
+            };
+
+
+        });
+
+
+        function appendFeedbackScript() {
+            var feedbackSrc = "https://w.appzi.io/w.js?token=tcKvj";
+            // ID may change
+            $("body").addClass("appzi-on-3647ee0f-fe78-4f1b-8af8-dfeb53354dc5");
+            if ($("head script[src='" + feedbackSrc + "']").length > 0) return;
+            var ele = document.createElement("script");
+            ele.setAttribute("type", "text/javascript");
+            ele.setAttribute("async", "");
+            ele.setAttribute("src", feedbackSrc);
+            //console.log(ele);
+            $("head").append(ele);
+        }
+        $(document).ready(function () {
+            $("[data-Table]").DataTable()
+        });
+
+    </script>
+    <script>
+        document.querySelector('[data-title="one"]').addEventListener('click', function () { document.querySelector('[data-title="this"]').innerHTML = "Upcoming Appointment"; });
+        document.querySelector('[data-title="two"]').addEventListener('click', function () { document.querySelector('[data-title="this"]').innerHTML = "Previous Appointment"; });
+    </script>
+
+</body>
+
+</html>
